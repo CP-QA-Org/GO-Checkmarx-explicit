@@ -16,12 +16,11 @@ jobs:
 
       - name: Run Checkmarx One SAST Scan
         id: checkmarxone-sast-step
-        uses: cloudbees-io/checkmarxone-sast-plugin-private@CBP-36890
+        uses: cloudbees-io/checkmarxone-sast-plugin-private@v1
         with:
           api-key: ${{ secrets.CHECKMARXONE_API_KEY }}
           url: ${{ vars.CHECKMARXONE_BASE_URL }}
           tenant: ${{ vars.CHECKMARXONE_TENANT }}
-          severity: high,medium
           
       - id: print-outputs-from-CheckmarxOne-sast-step
         name: print outputs from upstream Checkmarx One SAST step
