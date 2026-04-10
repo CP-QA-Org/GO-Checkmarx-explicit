@@ -10,5 +10,5 @@ jobs:
       - uses: cloudbees-io/checkout@v1
         name: checkout
 
-      - uses: checkmarxone-sast-qa
+      - uses: checkmarxone-sast-action
         name: checkmarxone sast
