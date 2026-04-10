@@ -21,6 +21,7 @@ jobs:
           api-key: ${{ secrets.CHECKMARXONE_API_KEY }}
           url: ${{ vars.CHECKMARXONE_BASE_URL }}
           tenant: ${{ vars.CHECKMARXONE_TENANT }}
+          severity: high,medium
           
       - id: print-outputs-from-CheckmarxOne-sast-step
         name: print outputs from upstream Checkmarx One SAST step
